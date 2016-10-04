@@ -1,0 +1,165 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            /* CSS for the entire body*/
+            #body-content {
+                margin: 0;
+            }
+
+            /* CSS for the header section */
+            header.wrapper {
+                margin: 20px;
+            }
+
+            header .title {
+                text-align: right;
+                font-size: 3em;
+            }
+
+            header .sub-title {
+                text-align: right;
+                font-size: 1.5em;
+                margin: 0 auto;
+            }
+            
+            /* CSS for the sidebar secton */
+            aside.wrapper {
+                float: left;
+                width: 20%;
+                order: 0;
+                margin: 0 5%;
+            }
+
+            aside .sideBar {
+                font-size: 1.25em;
+            }
+
+            #blue-icon {
+                background: #02b3e4;
+                width: 50px;
+                height: 50px;
+            }
+
+            #dark-blue-icon {
+                background: #2d3c40;
+                width: 50px;
+                height: 50px;
+            }
+
+            #grey-blue-icon {
+                background: #7d97ad;
+                width: 50px;
+                height: 50px;
+            }
+
+            /* CSS for the main content section */
+            .main {
+                width: 65%;
+                order: 1;
+                margin-right: 5%;
+                float: right;
+                font-size: 1.5em;
+            }
+
+            .main-content img {
+                width: 100%;
+            }
+
+            .main-content h2 {
+                font-size: 1.5em;
+                margin: 0;
+            }
+
+            .main-content p {
+                font-size: 1em;
+                margin: 0;
+                width: 30%;
+                text-align: justify;
+            }
+
+            /* CSS for the featured content section */
+            .featured-content {
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+            }
+
+            .featured-content h2 {
+                width: 100%;
+            }
+
+            .featured-content div {
+                width: 100%;
+                margin-right: 3%;
+            }
+
+            .featured-content div img {
+                width: 100%;
+            }
+
+            .featured-content div span {
+                font-size: 1em;
+            }
+
+            /* responsive design when screen is larger than 850px wide*/
+            @media screen and (min-width: 850px) {
+                .featured-content div {
+                    font-size: 16px;
+                }
+
+                .featured-content div {
+                width: 30%;
+                margin-right: 3%;
+                }
+            }
+        </style>
+    </head>
+    <body id="body-content">
+        <!-- Header section at the top -->
+        <header class="wrapper">
+            <div class="title">
+                Werner Chao
+            </div>
+            <p class="sub-title">
+                Front End Developer
+            </p>
+            <hr />
+        </header>
+        <!-- Side bar section for the 3 color icons -->
+        <aside class="wrapper">
+            <div class="sideBar" id="blue-icon"></div>
+            <p>#02b3e4</p>
+            <div class="sideBar" id="dark-blue-icon"></div>
+            <p>#2d3c40</p>
+            <div class="sideBar" id="grey-blue-icon"></div>
+            <p>#7d97ad</p>
+        </aside>
+        <!-- Main content section in the middle -->
+        <main class="main">
+            <section class="main-content">
+                <div><img alt="an image of designing website" src="design-website.jpg"></div>
+            </section>
+            <!-- Featured content near the bottom -->
+            <section class="featured-content">
+                    <h2>Featured Work</h2>
+                    <div>
+                        <img alt="an image of movie trailer website" src="movie-trailer-website.jpg">
+                        <span><a href="https://github.com/wernerchao/Movie-Trailer-Website.git">Movie Trailer Website</a></span>
+                        <div> </div><br/>
+                    </div>
+                    <div>
+                        <img src="Sunflower.jpg">
+                        <span><a alt="a sunflower image" href="https://github/udacity/Sunflower">Sunflower</a></span>
+                        <div> </div><br/>
+                    </div>
+                    <div>
+                        <img alt="a sky image" src="Bokeh.jpg">
+                        <span><a href="https://github/udacity/Bokeh">Bokeh</a></span>
+                        <div> </div><br/>
+                    </div>
+            </section>
+        </main>
+    </body>
+</html>
