@@ -14,29 +14,44 @@ To start using this repository
 
 >  ```> $ git clone https://github.com/wernerchao/Portfolio-Site.git```
 
-To run the website
-
-> ```> $ python entertainment_center.py```
+For a [demo] of the website (https://portfolio-site-6e87d.firebaseapp.com)
 
 ## What's Included
 
-Within the download you'll find the following directories and files. 
-The main files that you can edit will be:
+Within the download you'll find the following directories and files:
 
 ```
-Movie-Trailer-Website/
-├── entertainment_center.py
-├── fresh_tomatoes.py
-└── media.py 
+├── public/
+├── .firebaserc
+├── database.rules.json
+├── firebase.json
+└── README.md
 ```
 
-Once you run the website, these files will be generated:
+The firebase files are used to host on firebase. Please do not edit any firebase related files.
+
+The main file to look at is:
 
 ```
-Movie-Trailer-Website/
-├── fresh_tomatoes.pyc
-├── fresh_tomatoes.html
-└── media.pyc 
+/public/index.html
+```
+
+Where Werner Chao's projects are presented. You will also find a snippet of code near the end for Firebase configuration. 
+Please do not edit that part as well. It looks like this:
+
+```
+    <script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyBV3VOVzXjzJrnVxtazostum2alcTtHdJg",
+        authDomain: "portfolio-site-6e87d.firebaseapp.com",
+        databaseURL: "https://portfolio-site-6e87d.firebaseio.com",
+        storageBucket: "",
+        messagingSenderId: "87593566719"
+    };
+    firebase.initializeApp(config);
+    </script>
 ```
 
 ## Creators
