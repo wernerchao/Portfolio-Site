@@ -4,137 +4,116 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
             /* CSS for the entire body*/
-            #body-content {
+            .body-content {
                 margin: 10px;
             }
 
             /* CSS for the header section */
-            header.wrapper {
+            .header-wrapper {
                 margin: 20px;
             }
 
-            header .title {
+            .title {
                 text-align: right;
                 font-size: 3em;
+                margin: 0 auto;
             }
 
-            header .sub-title {
+            .sub-title {
                 text-align: right;
                 font-size: 1.5em;
                 margin: 0 auto;
             }
             
             /* CSS for the sidebar secton */
-            aside.wrapper {
+            .aside-wrapper {
                 float: left;
                 width: 20%;
-                order: 0;
                 margin: 0 5%;
             }
 
-            aside .sideBar {
+            .sideBar {
                 font-size: 1.25em;
+                width: 50px;
+                height: 50px;
             }
 
             #blue-icon {
                 background: #02b3e4;
-                width: 50px;
-                height: 50px;
             }
 
             #dark-blue-icon {
                 background: #2d3c40;
-                width: 50px;
-                height: 50px;
             }
 
             #grey-blue-icon {
                 background: #7d97ad;
-                width: 50px;
-                height: 50px;
             }
 
             /* CSS for the main content section */
             .main {
                 width: 65%;
-                order: 1;
                 margin-right: 5%;
                 float: right;
                 font-size: 1.5em;
             }
 
-            .main-content img {
+            .images { /*refers to both main-content and featured-content images*/
                 width: 100%;
             }
 
-            .main-content h2 {
-                font-size: 1.5em;
-                margin: 0;
-            }
-
-            .main-content p {
+            .main-content {
                 font-size: 1em;
                 margin: 0;
-                width: 30%;
+                width: 100%;
                 text-align: justify;
             }
 
             /* CSS for the featured content section */
-            .featured-content {
+            .featured-content, .featured-title {
                 display: flex;
                 flex-wrap: wrap;
                 width: 100%;
             }
 
-            .featured-content h2 {
+            .featured-blocks {
                 width: 100%;
-            }
-
-            .featured-content div {
-                width: 100%;
-                margin-right: 3%;
-            }
-
-            .featured-content div img {
-                width: 100%;
-            }
-
-            .featured-content div span {
-                font-size: 1em;
+                margin: 5px 3% 5px 0;
             }
 
             .footer-content {
                 font-size: 0.6em;
-                margin: 0 auto;
                 text-align: center;
+                position: relative;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: #efefef;
             }
 
             /* responsive design when screen is larger than 850px wide*/
             @media screen and (min-width: 850px) {
-                .featured-content div {
+                .featured-blocks {
                     font-size: 16px;
-                }
-
-                .featured-content div {
-                width: 30%;
-                margin-right: 3%;
+                    width: 30%;
+                    margin-right: 3%;
                 }
             }
         </style>
     </head>
-    <body id="body-content">
+    <body class="body-content">
         <!-- Header section at the top -->
-        <header class="wrapper">
-            <div class="title">
+        <header class="header-wrapper">
+            <h1 class="title">
                 Werner Chao
-            </div>
+            </h1>
             <p class="sub-title">
                 Front End Developer
             </p>
             <hr />
         </header>
         <!-- Side bar section for the 3 color icons -->
-        <aside class="wrapper">
+        <aside class="aside-wrapper">
             <div class="sideBar" id="blue-icon"></div>
             <p>#02b3e4</p>
             <div class="sideBar" id="dark-blue-icon"></div>
@@ -145,34 +124,40 @@
         <!-- Main content section in the middle -->
         <main class="main">
             <section class="main-content">
-                <div><img alt="an image of designing website" src="design-website.jpg"></div>
+                <div>
+                    <img class="images" alt="an image of designing website" src="design-website.jpg">
+                    <p>This is a portfolio site to show case my past/current projects. I am an engineer, 
+                        and I love building things. Products I've built include KaJin Health, and Fish Hunter. 
+                        I also love hacking on the 3D printers.
+                    </p>
+                </div>
             </section>
             <!-- Featured content near the bottom -->
             <section class="featured-content">
-                    <h2>Featured Work</h2>
-                    <div>
-                        <img alt="an image of movie trailer website" src="movie-trailer-website.jpg">
+                    <h2 class="featured-title">Featured Work</h2>
+                    <div class="featured-blocks">
+                        <img class="images" alt="an image of movie trailer website" src="movie-trailer-website.jpg">
                         <span><a href="https://github.com/wernerchao/Movie-Trailer-Website.git">Movie Trailer Website</a></span>
                         <br/>
                     </div>
                     <br />
-                    <div>
-                        <a href="https://www.kajinonline.com"><img alt="an image of online mental health website" src="kajinhealth.jpg"></a>
+                    <div class="featured-blocks">
+                        <a href="https://www.kajinonline.com"><img class="images" alt="an image of online mental health website" src="kajinhealth.jpg"></a>
                         <span><a href="https://github.com/wernerchao/KaJin.git">Online Mental Health Platform</a></span>
                         <br/>
                     </div>
                     <br />
-                    <div>
-                        <a href="https://project-3373896903953203314.firebaseapp.com"><img alt="an image of learn japanese online website" src="learn-japanese-online.jpg"></a>
+                    <div class="featured-blocks">
+                        <a href="https://project-3373896903953203314.firebaseapp.com"><img class="images" alt="an image of learn japanese online website" src="learn-japanese-online.jpg"></a>
                         <span><a href="https://github.com/wernerchao/Learn-Japanese-Online.git">Learn Japanese Online Platform</a></span>
                         <br/>
                     </div>
             </section>
-            <br />
-            <footer>
-                <p class="footer-content">&copy; Copyright Werner Chao 2016</p>
-            </footer>
         </main>
+        <br />
+        <footer class="footer-content">
+            <p>&copy; Copyright Werner Chao 2016</p>
+        </footer>
     </body>
     <script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
     <script>
