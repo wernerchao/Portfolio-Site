@@ -1,0 +1,103 @@
+/* CSS for the entire body*/
+.body-content {
+    margin: 10px;
+}
+
+/* CSS for the header section */
+.header-wrapper {
+    margin: 20px;
+}
+
+.logo {
+    width: 45px;
+    height: 45px;
+    float: left;
+}
+
+.title {
+    text-align: right;
+    font-size: 3em;
+    margin: 0 auto;
+}
+
+.sub-title {
+    text-align: right;
+    font-size: 1.5em;
+    margin: 0 auto;
+}
+
+/* CSS for the sidebar secton */
+.aside-wrapper {
+    float: left;
+    width: 20%;
+    margin: 0 5%;
+}
+
+.sideBar {
+    font-size: 1.25em;
+    width: 50px;
+    height: 50px;
+}
+
+#blue-icon {
+    background: #02b3e4;
+}
+
+#dark-blue-icon {
+    background: #2d3c40;
+}
+
+#grey-blue-icon {
+    background: #7d97ad;
+}
+
+/* CSS for the main content section */
+.main {
+    width: 65%;
+    margin-right: 5%;
+    float: right;
+    font-size: 1.5em;
+}
+
+.images { /*refers to both main-content and featured-content images*/
+    width: 100%;
+}
+
+.main-content {
+    font-size: 1em;
+    margin: 0;
+    width: 100%;
+    text-align: justify;
+}
+
+/* CSS for the featured content section */
+.featured-content, .featured-title {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.featured-blocks {
+    width: 100%;
+    margin: 5px 3% 50px 0;
+}
+
+.footer-content {
+    font-size: 0.6em;
+    text-align: center;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #efefef;
+    height: 25px;
+}
+
+/* responsive design when screen is larger than 850px wide*/
+@media screen and (min-width: 850px) {
+    .featured-blocks {
+        font-size: 16px;
+        width: 30%;
+        margin-right: 3%;
+    }
+}

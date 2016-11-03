@@ -2,111 +2,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <style>
-            /* CSS for the entire body*/
-            .body-content {
-                margin: 10px;
-            }
-
-            /* CSS for the header section */
-            .header-wrapper {
-                margin: 20px;
-            }
-
-            .logo {
-                width: 45px;
-                height: 45px;
-                float: left;
-            }
-
-            .title {
-                text-align: right;
-                font-size: 3em;
-                margin: 0 auto;
-            }
-
-            .sub-title {
-                text-align: right;
-                font-size: 1.5em;
-                margin: 0 auto;
-            }
-            
-            /* CSS for the sidebar secton */
-            .aside-wrapper {
-                float: left;
-                width: 20%;
-                margin: 0 5%;
-            }
-
-            .sideBar {
-                font-size: 1.25em;
-                width: 50px;
-                height: 50px;
-            }
-
-            #blue-icon {
-                background: #02b3e4;
-            }
-
-            #dark-blue-icon {
-                background: #2d3c40;
-            }
-
-            #grey-blue-icon {
-                background: #7d97ad;
-            }
-
-            /* CSS for the main content section */
-            .main {
-                width: 65%;
-                margin-right: 5%;
-                float: right;
-                font-size: 1.5em;
-            }
-
-            .images { /*refers to both main-content and featured-content images*/
-                width: 100%;
-            }
-
-            .main-content {
-                font-size: 1em;
-                margin: 0;
-                width: 100%;
-                text-align: justify;
-            }
-
-            /* CSS for the featured content section */
-            .featured-content, .featured-title {
-                display: flex;
-                flex-wrap: wrap;
-                width: 100%;
-            }
-
-            .featured-blocks {
-                width: 100%;
-                margin: 5px 3% 50px 0;
-            }
-
-            .footer-content {
-                font-size: 0.6em;
-                text-align: center;
-                position: fixed;
-                right: 0;
-                bottom: 0;
-                left: 0;
-                background-color: #efefef;
-                height: 25px;
-            }
-
-            /* responsive design when screen is larger than 850px wide*/
-            @media screen and (min-width: 850px) {
-                .featured-blocks {
-                    font-size: 16px;
-                    width: 30%;
-                    margin-right: 3%;
-                }
-            }
-        </style>
+        <link rel="stylesheet" type="text/css" href="css/main.css">
     </head>
     <body class="body-content">
         <!-- Header section at the top -->
@@ -132,7 +28,7 @@
         <!-- Main content section in the middle -->
         <main class="main">
             <section class="main-content">
-                <img class="images" alt="an image of designing website" src="design-website.jpg">
+                <img class="images" alt="an image of designing website" src="images/design-website.jpg">
                 <p>This is a portfolio site to show case my past/current projects. I am an engineer, 
                     and I love building things. Products I've built include KaJin Health, and Fish Hunter. 
                     I also love hacking on the 3D printers.
@@ -140,24 +36,32 @@
             </section>
             <!-- Featured content near the bottom -->
             <section class="featured-content">
-                    <h2 class="featured-title">Featured Work</h2>
-                    <div class="featured-blocks">
-                        <img class="images" alt="an image of movie trailer website" src="movie-trailer-website.jpg">
-                        <span><a href="https://github.com/wernerchao/Movie-Trailer-Website.git">Movie Trailer Website</a></span>
-                        <br/>
-                    </div>
-                    <br />
-                    <div class="featured-blocks">
-                        <a href="https://www.kajinonline.com"><img class="images" alt="an image of online mental health website" src="kajinhealth.jpg"></a>
-                        <span><a href="https://github.com/wernerchao/KaJin.git">Online Mental Health Platform</a></span>
-                        <br/>
-                    </div>
-                    <br />
-                    <div class="featured-blocks">
-                        <a href="https://project-3373896903953203314.firebaseapp.com"><img class="images" alt="an image of learn japanese online website" src="learn-japanese-online.jpg"></a>
-                        <span><a href="https://github.com/wernerchao/Learn-Japanese-Online.git">Learn Japanese Online Platform</a></span>
-                        <br/>
-                    </div>
+                <h2 class="featured-title">Featured Work</h2>
+                <div class="featured-blocks">
+                    <img class="images" alt="an image of movie trailer website" src="images/movie-trailer-website.jpg">
+                    <ul>
+                        <li><a href="https://github.com/wernerchao/Movie-Trailer-Website.git">Movie Trailer Website (GitHub)</a></li>
+                    </ul>
+                    <br/>
+                </div>
+                <br />
+                <div class="featured-blocks">
+                    <a href="https://www.kajinonline.com"><img class="images" alt="an image of online mental health website" src="images/kajinhealth.jpg"></a>
+                    <ul>
+                        <li><a href="https://kajinonline.com">Online Mental Health Platform</a></li>
+                        <li><a href="https://github.com/wernerchao/KaJin.git">GitHub</a></li>
+                    </ul>
+                    <br/>
+                </div>
+                <br />
+                <div class="featured-blocks">
+                    <a href="https://project-3373896903953203314.firebaseapp.com"><img class="images" alt="an image of learn japanese online website" src="images/learn-japanese-online.jpg"></a>
+                    <ul>
+                        <li><a href="https://project-3373896903953203314.firebaseapp.com/">Learn Japanese Online Platform</a></li>
+                        <li><a href="https://github.com/wernerchao/Learn-Japanese-Online.git">GitHub</a></li>
+                    </ul>
+                    <br/>
+                </div>
             </section>
         </main>
         <br />
@@ -166,15 +70,5 @@
         </footer>
     </body>
     <script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
-    <script>
-    // Initialize Firebase
-    var config = {
-        apiKey: "AIzaSyBV3VOVzXjzJrnVxtazostum2alcTtHdJg",
-        authDomain: "portfolio-site-6e87d.firebaseapp.com",
-        databaseURL: "https://portfolio-site-6e87d.firebaseio.com",
-        storageBucket: "",
-        messagingSenderId: "87593566719"
-    };
-    firebase.initializeApp(config);
-    </script>
+    <script src="js/init.js"></script>
 </html>
