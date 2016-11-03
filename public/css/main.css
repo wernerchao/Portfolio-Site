@@ -64,7 +64,7 @@
 }
 
 .main-content {
-    font-size: 1em;
+    font-size: 0.8em;
     margin: 0;
     width: 100%;
     text-align: justify;
@@ -75,11 +75,13 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    font-size: 1.2em;
 }
 
 .featured-blocks {
     width: 100%;
     margin: 5px 3% 50px 0;
+    font-size: 0.8em;
 }
 
 .footer-content {
