@@ -14,7 +14,7 @@ To start using this repository
 
 >  ```> $ git clone https://github.com/wernerchao/Portfolio-Site.git```
 
-For a [demo] of the website (https://portfolio-site-6e87d.firebaseapp.com)
+Here is a [demo](https://portfolio-site-6e87d.firebaseapp.com) of the website
 
 ## What's Included
 
